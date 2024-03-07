@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+using namespace std;
+int findDigits(int n){
+    int ans = 0;
+    int num = n;
+    while(n!=0){
+       int m = n % 10;
+        if(m != 0 && num % m == 0){
+            ans+=1;
+        }
+        n /= 10;
+    }
+    return ans;
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin >> n;
+        cout << findDigits(n) << endl;
+    }
+    return 0;
+}
