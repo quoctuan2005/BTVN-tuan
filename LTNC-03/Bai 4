@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int camelcase(string s) {
+int words = 1;
+for(char y : s){
+    if( y >= 'A' && y <='Z'){
+        words++;
+    }
+}
+return words;
+}
+int main()
+{
+    string s;
+    cin >> s;
+    cout << camelcase(s);
+    return 0;
+}
