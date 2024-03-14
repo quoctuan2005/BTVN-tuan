@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string a, b;
+    cin >> a >> b;
+    int len1 = a.size();
+    int len2 = b.size();
+    string c = a + b;
+    char tu1 = '0'; // abcd  ef//
+    tu1 = a[0];
+    a[0] = b[0];
+    b[0] = tu1;
+    cout << len1 << " " << len2 << "\n"
+         << c << "\n"
+         << a << " " << b;
+}
