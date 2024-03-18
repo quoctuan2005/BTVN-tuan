@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n, k;
+    string s;
+    cin >> n;
+    cin >> s;
+    cin >> k; 
+    string result = "";
+    for ( char y : s){
+       if (isalpha(y)){
+           if ( isupper(y)){
+                y = char ((int(y)+ k -  'A') % 26 + 'A' );
+           } else { 
+                y = char ((int(y)+ k - 'a' ) % 26 + 'a' );    
+           }
+       }
+       result += y;
+}
+ cout << result;
+}
