@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+string HackerRank(string s){
+    string temp = "hackerrank";
+    int i = s.size();
+    int j = temp.size();
+    int m = 0;
+    int n = 0;
+    while ( m < i && n < j ){ 
+        if (s[m] == temp[n]){
+            m++;
+            n++;
+        }else {
+            m++;
+        }
+    }
+        if( n == j){
+            return "YES";
+        }else 
+    return "NO";
+}
+int main(){
+    int k;
+    cin >> k;
+    string s;
+    while (k!=0){
+        cin >> s;
+        k--;
+        cout << HackerRank(s)<<endl;
+    }
+}
