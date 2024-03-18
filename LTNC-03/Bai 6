@@ -10,9 +10,9 @@ int main(){
     for ( char y : s){
        if (isalpha(y)){
            if ( isupper(y)){
-                y = char ((int(y)+ k -  'A') % 26 + 'A' );
+                y = ((y + k -  'A' )% 26 + 'A' );
            } else { 
-                y = char ((int(y)+ k - 'a' ) % 26 + 'a' );    
+                y = ((y + k - 'a' )% 26 + 'a' );    
            }
        }
        result += y;
