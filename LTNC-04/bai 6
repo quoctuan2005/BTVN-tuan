@@ -23,7 +23,6 @@ int getTotalX(vector<int> a, vector<int> b) {
             }
         }
         if (check) cnt++;
-        // cout << cnt << " ";
     }
     return cnt;
 }
