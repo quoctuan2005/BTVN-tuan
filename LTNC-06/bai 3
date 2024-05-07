@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Student{
+  private:
+   int score = 0;
+  public:
+  void input(){
+      for(int i = 0; i< 5; i++){
+          int a;
+          cin >> a;
+          score += a;
+      }
+    }
+    int calculateTotalScore(){
+          return score;
+      }
+};
+int main() {
+    int n;
+    cin >> n;
+  
+    Student *s = new Student[n];
+    for(int i = 0; i < n; i++){
+          s[i].input();
+    }
+    int kristen = s[0].calculateTotalScore();
+    int cnt = 0;
+    for(int i = 1 ; i < n; i++){
+        int high = s[i].calculateTotalScore();
+        if( high > kristen ){
+            cnt++;
+        }
+    }
+    cout << cnt;
+    
+    return 0;
+}
